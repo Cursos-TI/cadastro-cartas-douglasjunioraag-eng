@@ -42,8 +42,10 @@ int main() {
   scanf("%f", &pib, "\n");
 
   printf("Digite a quantidade de pontos turisticos: ");
-  scanf("%d", &turismo, "\n");
+  scanf("%d", &turismo, "\n\n\n");
 
+  float densidadep = populacao / areakm;
+  float pibper = populacao / pib;
 
   printf("Digite uma letra entre A - H referente ao Estado: ");
   scanf(" %c", &estado2, "\n");
@@ -66,13 +68,15 @@ int main() {
   printf("Digite a quantidade de pontos turisticos: ");
   scanf("%d", &turismo2, "\n");
 
-  // Área para exibição dos dados da cidade
+   float densidadep2 = populacao2 / areakm2;
+   float pibper2 = populacao2 / pib2;
+   //Área para exibição dos dados da cidade
 
-  printf("Carta 1:\nEstado: %c\nCódigo: %c%s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2fKm²\nPIB: %.2f bilhões de reais\nNúmero de pontos turísticos: %d\n\n\n",
-   estado, estado, codigoCarta, cidade, populacao, areakm, pib, turismo);
+  printf("Carta 1:\nEstado: %c\nCódigo: %c%s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2fKm²\nPIB: %.2f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %.2f hab/km²\nPIB Percapita: %.2f reais\n\n",
+   estado, estado, codigoCarta, cidade, populacao, areakm, pib, turismo, densidadep, pibper);
 
-  printf("Carta 2:\nEstado: %c\nCódigo: %c%s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2fKm²\nPIB: %.2f bilhões de reais\nNúmero de pontos turísticos: %d\n\n\n",
-   estado2, estado2, codigocarta2, cidade2, populacao2, areakm2, pib2, turismo2);
+  printf("Carta 2:\nEstado: %c\nCódigo: %c%s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2fKm²\nPIB: %.2f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %.2f hab/km²\nPIB Percapita: %.2f reais\n",
+   estado2, estado2, codigocarta2, cidade2, populacao2, areakm2, pib2, turismo2, densidadep2, pibper2);
 
 return 0;
 }
